@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Instruções para Desenvolvimento
 
 Este projeto requer a recriação de uma página mobile baseada em um design fornecido no Figma. A pessoa responsável por este teste deve utilizar o arquivo fornecido no projeto para desenvolver a página conforme as especificações do design.
@@ -47,3 +48,7 @@ Para o componente slider, você poderá utilizar a biblioteca que quiser. Sugeri
 Para a composição do card de produtos no slider, deverá ser utilizado as informações retornantes da função `getProducts` presente no arquivo `/src/utils.js`.
 
 
+=======
+# WeCode
+WeCode
+>>>>>>> 637d7216887ff3b28b005c44926d4096a38a9a09
