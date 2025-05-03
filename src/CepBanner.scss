@@ -1,0 +1,18 @@
+.cep-banner {
+  background-color: #b6161d;
+  color: white;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+
+  button {
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,117 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .cep-modal {
+    background: #fff;
+    padding: 24px 28px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 2px;
+    position: relative;
+    font-family: Arial, sans-serif;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    line-height: 1.4;
+  }
+  
+  label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+  
+  .field-label {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  input, select {
+    width: 93%;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    background-color: #f9f9f9;
+  }
+  
+  .optional-fields {
+    display: flex;
+    gap: 12px;
+    margin-top: 5px;
+  }
+  
+  .field-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .save-button {
+    background-color: #b6161d;
+    color: white;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+
+  .row-fields {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+  
+    .field {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+  
+      .field-label {
+        margin-bottom: 4px;
+        font-size: 16px;
+        color: #333; // ou um tom de cinza conforme sua referência
+      }
+  
+      input, select {
+        padding: 16px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        background: #f9f9f9;
+        color: #333;
+      }
+    }
+  }
+  
+  
