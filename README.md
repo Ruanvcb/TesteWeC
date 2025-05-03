@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Instruções para Desenvolvimento
 
 Este projeto requer a recriação de uma página mobile baseada em um design fornecido no Figma. A pessoa responsável por este teste deve utilizar o arquivo fornecido no projeto para desenvolver a página conforme as especificações do design.
@@ -52,3 +53,6 @@ Para a composição do card de produtos no slider, deverá ser utilizado as info
 # WeCode
 WeCode
 >>>>>>> 637d7216887ff3b28b005c44926d4096a38a9a09
+=======
+# Teste-We-Code
+>>>>>>> f4046c1c7801c1fe07382c5848472e747688583c
