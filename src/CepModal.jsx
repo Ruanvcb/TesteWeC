@@ -27,19 +27,35 @@ export default function CepModal({ onClose, onSave }) {
         />
 
         <div className="optional-fields">
-          <input
-            type="text"
-            placeholder="Opcional"
-            value={cidade}
-            onChange={(e) => setCidade(e.target.value)}
-          />
-          <select value={estado} onChange={(e) => setEstado(e.target.value)}>
-            <option value="">Opcional</option>
-            <option value="SP">SP</option>
-            <option value="RJ">RJ</option>
-            <option value="RS">RS</option>
-            {/* etc... */}
-          </select>
+          <div className="field-group">
+            <label htmlFor="cidade">Cidade</label>
+            <input
+              id="cidade"
+              type="text"
+              placeholder="Opcional"
+              value={cidade}
+              onChange={(e) => setCidade(e.target.value)}
+            />
+          </div>
+          <div className="field-group">
+            <label htmlFor="estado">Estado</label>
+            <select
+              id="estado"
+              value={estado}
+              onChange={(e) => setEstado(e.target.value)}
+            >
+              <option value="">Opcional</option>
+              <option value="SP">SP</option>
+              <option value="RJ">RJ</option>
+              <option value="RS">RS</option>
+              {/* etc... */}
+            </select>
+          </div>
+        </div>
+
+
+        <div className="optional-fields">
+
         </div>
 
         <button className="save-button" onClick={handleSave}>Salvar endereço</button>

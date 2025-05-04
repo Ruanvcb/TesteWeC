@@ -1,11 +1,16 @@
 .cep-banner {
   background-color: #b6161d;
   color: white;
-  padding: 8px 16px;
+  padding:11px 16px;
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 10px; 
   font-size: 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; // acima do header
 
   button {
     background: none;

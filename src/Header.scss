@@ -4,33 +4,72 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 16px;
-    background-color: white;
-    border-bottom: 1px solid #ddd;
+    padding: 8px 15px;
+    position: fixed;
+    left: 0;
+    width: 95%;
+    z-index: 10;
+    background-color: transparent;
+    border-bottom: none;
+    transition: background-color 0.3s ease, border-bottom 0.3s ease, color 0.3s ease;
+
+    .icon-button{
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .logo{
+      color: white; // cor inicial da logo
+      transition: color 0.3s ease;
+    }
+
+    &.scrolled {
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+  
+      .icon-button {
+        color: #111; // cor após scroll
+      }
+  
+      .logo {
+        color: #111; // logo após scroll
+      }
+    }
   }
   
   .header-left {
     display: flex;
-    gap: 16px;
+    gap: 10px; //separação dos icons
   }
   
   .logo {
     font-family: 'GFS Didot', serif;
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     font-weight: normal;
     text-transform: lowercase;
+    transition: font-size 0.3s ease;
+    transition: color 0.3s ease;
+  
+    &.light {
+      color: white;
+    }
+  
+    &.dark {
+      color: #111;
+    }
   }
+  
   
   .icon-button {
     background: none;
     border: none;
     padding: 0;
+    margin-right: 5px;
     cursor: pointer;
-    font-size: 20px; // Ajusta o tamanho dos ícones Font Awesome
-    color: #111;     // Ou use "white" se fundo escuro
+    font-size: 18px;
+    color: #111;
   }
   
   .icon-button:focus {
     outline: none;
   }
-  

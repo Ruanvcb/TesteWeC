@@ -14,27 +14,27 @@
   .cep-modal {
     background: #fff;
     padding: 24px 28px;
-    width: 90%;
+    width: 75%;
     max-width: 400px;
-    border-radius: 2px;
     position: relative;
     font-family: Arial, sans-serif;
   }
   
   .close-button {
     position: absolute;
-    top: 10px;
-    right: 14px;
-    font-size: 22px;
-    background: none;
+    top: 0px;
+    right: 0px;
+    font-size: 35px;
+    background: b6bab9;
     border: none;
+    font-family: 'Times New Roman', Times, serif;
     cursor: pointer;
-    color: #555;
+    color: #808584;
   }
   
   h2 {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 10;
     margin-bottom: 24px;
     line-height: 1.4;
   }
@@ -53,7 +53,7 @@
     display: block;
   }
 
-  input, select {
+  input {
     width: 93%;
     padding: 10px 12px;
     font-size: 15px;
@@ -65,14 +65,28 @@
   
   .optional-fields {
     display: flex;
-    gap: 12px;
-    margin-top: 5px;
-  }
+    gap: 16px; // aumenta o espaçamento entre os campos
+    margin-top: 8px;
   
-  .field-group {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    .field-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+  
+      label {
+        margin-bottom: 6px;
+        font-size: 15px;
+        font-weight: 500;
+      }
+  
+      input, select {
+        padding: 10px 5px ;
+        font-size: 15px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        background-color: #f9f9f9;
+      }
+    }
   }
   
   .save-button {
