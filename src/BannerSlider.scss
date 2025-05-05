@@ -1,28 +1,49 @@
 // src/BannerSlider.scss
 
 .banner-slider {
-  
-    .slide {
-      position: relative;
+  .slide {
+    position: relative;
+    width: 100%;
+    height: 100vh; // ajuste conforme o layout mobile
+    overflow: hidden;
+
+    img {
       width: 100%;
-      height: 100vh; // ajuste conforme o layout mobile
-      overflow: hidden;
-  
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
-  
-    .slick-dots {
-      bottom: 50px;
-      li button:before {
+  }
+
+  .conheca-btn,
+  .ver-colecao-btn{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color:rgba(187, 185, 185, 0.274); // leve transparência/achei no stack over
+    color: #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover{
+      background-color: rgba(187, 185, 185, 0.274);;
+    }
+
+  }
+
+  .slick-dots {
+    bottom: 50px;
+    
+    li {
+      margin: 0 -3px; //assim as bolinhas(slick-dot) ficam mais próximas/ Achei no stack tbm 
+
+      button:before{
         margin-left: 150px;
+        margin-top: 30px;
         color: white;
-        font-size: 15px;
+        font-size: 10px;
       }
     }
   }
-  
+}

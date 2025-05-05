@@ -6,8 +6,8 @@ import "./BannerSlider.scss";
 export default function BannerSlider() {
   const images = [
     "/images/static/banner/banner-principal-1.png",
-    "/images/static/banner/banner-principal-2.png",
     "/images/static/banner/banner-principal-3.png",
+    "/images/static/banner/banner-principal-2.png",
   ];
 
   const settings = {
@@ -25,6 +25,18 @@ export default function BannerSlider() {
         {images.map((src, index) => (
           <div key={index} className="slide">
             <img src={src} alt={`Banner ${index + 1}`} />
+
+            {src.includes("banner-principal-1.png") && (
+              <button className="conheca-btn">
+                <u>Conheça agora!</u>
+              </button>
+            )}
+
+            {src.includes("banner-principal-2.png") && (
+              <button className="ver-colecao-btn">
+                <u>Ver coleção completa</u>
+              </button>
+            )}
           </div>
         ))}
       </Slider>

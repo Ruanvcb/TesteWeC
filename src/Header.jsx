@@ -37,7 +37,7 @@ export default function Header() {
         </button>
 
         <button className="icon-button">
-            <i class="fa-solid fa-bag-shopping"></i>
+            <i className="fa-solid fa-bag-shopping"></i>
         </button>
       </div>
     </header>
