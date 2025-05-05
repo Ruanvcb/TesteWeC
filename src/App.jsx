@@ -3,6 +3,7 @@ import BannerSlider from "./BannerSlider";
 import CategoriaSlider from "./CategoriaSlider";
 import ProdutoSlider from "./ProdutoSlider";
 import AnuncioSlider from "./AnuncioSlider";
+import CupomCadastro from "./CupomCadastro";
 import CepBanner from "./CepBanner";
 import Header from "./Header";
 import CepModal from "./CepModal";
@@ -27,6 +28,7 @@ export default function App() {
       <CategoriaSlider />
       <ProdutoSlider />
       <AnuncioSlider />
+      <CupomCadastro />
     </div>
     
     {showModal && (
