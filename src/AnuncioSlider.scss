@@ -1,0 +1,77 @@
+.anuncio-slider {
+    padding: 20px 16px;
+    background-color: #f8f8f8; // Cor de fundo mais clara e consistente com a imagem
+  
+    .slick-dots {
+        bottom: 50px;
+        
+        li {
+          margin: 0 -3px; //assim as bolinhas(slick-dot) ficam mais próximas/ Achei no stack tbm 
+    
+          button:before{
+            margin-left: 150px;
+            margin-top: 50px;
+            color: rgb(0, 0, 0);
+            font-size: 8px;
+          }
+        }
+      }
+  
+    .slick-slide > div {
+      padding: 0 10px;
+    }
+  
+    .anuncio-titulo {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #000;
+      margin-bottom: 4px;
+    }
+  
+    .anuncio-sub {
+      font-size: 0.9rem;
+      margin-top: -5px;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+  
+    .anuncio-card {
+      background-color: #f8f8f8;
+      padding-bottom: 30px;
+      margin-top: 10px;
+      margin-left: -10px;
+  
+      .anuncio-img {
+        width: 100%;
+        border-radius: 1px;
+        margin-bottom: 16px;
+      }
+  
+      .anuncio-conteudo {
+        padding: 0 8px;
+  
+        .anuncio-card-title {
+          font-size: 1rem;
+          font-weight: 600;
+          color: #222;
+          margin-bottom: 6px;
+        }
+  
+        .anuncio-texto {
+          font-size: 0.72rem;
+          color: #555555ab;
+          line-height: 1.5;
+          margin-bottom: 8px;
+        }
+  
+        .anuncio-link {
+          font-size: 0.9rem;
+          color: #000;
+          text-decoration: underline;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  

@@ -42,7 +42,7 @@ export default function ProdutoSlider() {
                 >
                 </i>
 
-                <i class="fa-solid fa-bag-shopping"></i>
+                <i className="fa-solid fa-bag-shopping"></i>
 
                 {image.includes("produto-2.png") && (
                     <span className="desconto-label">10% OFF</span>
