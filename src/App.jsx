@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import BannerSlider from "./BannerSlider";
+import CategoriaSlider from "./CategoriaSlider";
 import CepBanner from "./CepBanner";
 import Header from "./Header";
 import CepModal from "./CepModal";
@@ -21,6 +22,7 @@ export default function App() {
     <Header />
     <div className="main-content">
       <BannerSlider />
+      <CategoriaSlider />
     </div>
     
     {showModal && (
