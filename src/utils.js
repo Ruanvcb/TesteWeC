@@ -1,4 +1,3 @@
-
 export   function getProducts() {
      return new Promise((res) => {
           //Acabei mudando a rota sem querer ao mudar as pastas de ordem,

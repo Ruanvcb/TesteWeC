@@ -1,0 +1,117 @@
+// src/ProdutoModal.scss
+.produto-modal-overlay {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+  
+    .produto-modal {
+      background: #fff;
+      padding: 1px;
+      width: 90%;
+      height: 90%;
+      max-width: 400px;
+      border-radius: 1px;
+      position: relative;
+      text-align: center;
+  
+      .close-button {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        font-size: 25px;
+        background: #EEEEEE;
+        border: none;
+        font-family: 'Times New Roman', Times, serif;
+        cursor: pointer;
+        color: #808584;
+      }
+  
+      .produto-img {
+        width: 100%;
+        height: 50%;
+        background-color: #F7F7F7;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+  
+      h3 {
+        font-size: 1.2rem;
+        padding: 10px;
+        text-align: justify;
+        font-weight: lighter;
+        margin-bottom: 12px;
+      }
+  
+      .tamanhos {
+          .alinhar{
+            padding: 5px;
+            text-align: left;
+          }
+
+        //tamanho entre os quadrados
+        .grade {
+          display: grid;
+          grid-template-columns: repeat(6, 3.3rem);
+          gap: 8px;
+          padding: 5px;
+          margin: 2px 0;
+  
+          .tamanho-btn {
+            padding: 15px 10px 15px 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            background: white;
+            cursor: pointer;
+  
+            &.selected {
+              border: 1px solid black;
+            }
+  
+            &:disabled {
+                content: '';
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+
+            //Isso é uma gambiarra sem tamano
+            //Quem for avaliar isso nao ria
+            &:disabled::before {
+                content: '';
+                position: absolute;
+                top: 78%;
+                left: 25%;
+                height: 8%;
+                border-top: 6px solid black;
+                border-right: 1px solid black;
+                transform: rotate(45deg);
+              }
+            
+          }
+        }
+      }
+  
+      .adicionar-btn {
+        background: #b71c1c;
+        color: white;
+        padding: 12px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        border: none;
+        font-size: 1rem;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+      }
+    }
+  }
+  

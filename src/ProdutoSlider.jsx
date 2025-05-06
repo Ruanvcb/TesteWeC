@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { getProducts } from "./utils";
 import "./ProdutoSlider.scss";
+import ProdutoModal from "./ProdutoModal";
 
-export default function ProdutoSlider() {
+export default function ProdutoSlider({ onAddToCart }) {
   const [produtos, setProdutos] = useState([]);
   const [favoritos, setFavoritos] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     getProducts().then(setProdutos);
@@ -33,22 +35,31 @@ export default function ProdutoSlider() {
         {produtos.map(({ id, name, image, price }) => (
           <div className="produto-card" key={id}>
             <div className="img-container">
-                <img src={image} alt={name} />
-                <i
-                className={`fa-heart heart-icon ${
-                    favoritos.includes(id) ? "fas" : "far"
-                }`}
-                onClick={() => toggleFavorito(id)}
-                >
-                </i>
+              <img src={image} alt={name} />
+              <i
+              className={`fa-heart heart-icon ${
+                  favoritos.includes(id) ? "fas" : "far"
+              }`}
+              onClick={() => toggleFavorito(id)}
+              >
+              </i>
 
-                <i className="fa-solid fa-bag-shopping"></i>
+              <i
+                className="fa-solid fa-bag-shopping"
+                onClick={() => onAddToCart({ id, name, image, price })}
+              />
 
-                {image.includes("produto-2.png") && (
-                    <span className="desconto-label">10% OFF</span>
-                )}
-
+              {image.includes("produto-2.png") && (
+                  <span className="desconto-label">10% OFF</span>
+              )}
             </div>
+
+            {selectedProduct && (
+              <ProdutoModal
+                product={selectedProduct}
+                onClose={() => setSelectedProduct(null)}
+              />
+            )}
 
             {/* Demorei um pouco pra conseguir fazer funcionar */}
 
