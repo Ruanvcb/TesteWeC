@@ -9,7 +9,6 @@ export default function CupomCadastro() {
   const handleCopy = () => {
     navigator.clipboard.writeText("BEMVINDA");
     setCopiado(true);
-    setTimeout(() => setCopiado(false), 2000);
   };
 
   const handleEnviar = () => {

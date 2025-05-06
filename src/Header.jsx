@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import './Header.scss';
 
 export default function Header() {
@@ -8,11 +8,12 @@ export default function Header() {
     const handleScroll = () => {
       if (window.scrollY > 10){
         setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -28,8 +29,12 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Não identifiquei qual a font correta */}
-      <h1 className={`logo ${isScrolled ? "dark" : "light"}`}>bebecê</h1>
+      {/* Demorei pra perceber que eram fotos no logo e não fonts do Google, muito bobo */}
+      <img
+        src={`/images/static/rodape/${isScrolled ? 'MiniLogoPreta.png' : 'MiniLogo.png'}`}
+        alt="Mini Logo"
+        className="logo"
+      />
 
       <div className="header-left">
         <button className="icon-button">
@@ -37,7 +42,7 @@ export default function Header() {
         </button>
 
         <button className="icon-button">
-            <i className="fa-solid fa-bag-shopping"></i>
+          <i className="fa-solid fa-bag-shopping"></i>
         </button>
       </div>
     </header>

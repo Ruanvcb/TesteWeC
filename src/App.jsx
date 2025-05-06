@@ -7,6 +7,7 @@ import CupomCadastro from "./CupomCadastro";
 import CepBanner from "./CepBanner";
 import Header from "./Header";
 import CepModal from "./CepModal";
+import Footer from "./Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -34,6 +35,8 @@ export default function App() {
     {showModal && (
       <CepModal onClose={() => setShowModal(false)} onSave={handleSaveCep} />
     )}
+
+    <Footer/>
   </>
   );
 }
