@@ -15,5 +15,11 @@ code {
 }
 
 .main-content {
-  margin-top: 40px; // 40px (CepBanner) + 56px (Header)
+  margin-top: 40px;
+}
+
+//trabalha em escopo global pra impedir o rolamento de página com o side bar aberto
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
 }

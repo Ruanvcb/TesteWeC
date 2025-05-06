@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
-import './Header.scss';
+import SideBar from "./SideBar";
+import "./Header.scss";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-  
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10){
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -18,33 +16,36 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`header ${isScrolled ? "scrolled" : ""}`}>
-      <div className="header-left">
-        <button className="icon-button">
-          <i className="fa fa-bars"></i>
-        </button>
+    <>
+      <header className={`header ${isScrolled ? "scrolled" : ""}`}>
+        <div className="header-left">
+          <button className="icon-button" onClick={() => setMenuOpen(true)}>
+            <i className="fa fa-bars"></i>
+          </button>
 
-        <button className="icon-button">
-          <i className="fa fa-magnifying-glass"></i>
-        </button>
-      </div>
+          <button className="icon-button">
+            <i className="fa fa-magnifying-glass"></i>
+          </button>
+        </div>
 
-      {/* Demorei pra perceber que eram fotos no logo e não fonts do Google, muito bobo */}
-      <img
-        src={`/images/static/rodape/${isScrolled ? 'MiniLogoPreta.png' : 'MiniLogo.png'}`}
-        alt="Mini Logo"
-        className="logo"
-      />
+        <img
+          src={`/images/static/rodape/${isScrolled ? "MiniLogoPreta.png" : "MiniLogo.png"}`}
+          alt="Mini Logo"
+          className="logo"
+        />
 
-      <div className="header-left">
-        <button className="icon-button">
-          <i className="fa-regular fa-user"></i>
-        </button>
+        <div className="header-left">
+          <button className="icon-button">
+            <i className="fa-regular fa-user"></i>
+          </button>
 
-        <button className="icon-button">
-          <i className="fa-solid fa-bag-shopping"></i>
-        </button>
-      </div>
-    </header>
+          <button className="icon-button">
+            <i className="fa-solid fa-bag-shopping"></i>
+          </button>
+        </div>
+      </header>
+
+      <SideBar isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
+    </>
   );
 }
