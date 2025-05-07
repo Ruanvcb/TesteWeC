@@ -25,7 +25,7 @@ Este é um projeto desenvolido para plataforma Mobile usando REACT JS e SCSS com
 ## 🖥️ Como rodar o projeto
 1. **Clone o repositório**
 
-git clone https://github.com/seu-usuario/nome-do-repo.git
+git clone (https://github.com/Ruanvcb/TesteWeC.git)
 cd nome-do-repo
 
 Passos para Executar
@@ -33,7 +33,7 @@ Passos para Executar
 Clone o repositório:
 
 git clone 
-[https://github.com/Ruanvcb/TesteTecnicoK.git](https://github.com/Ruanvcb/TesteWeC.git)
+(https://github.com/Ruanvcb/TesteWeC.git)
 
 Navegue até a pasta do projeto:
 
