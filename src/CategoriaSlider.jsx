@@ -5,9 +5,9 @@ import "./CategoriaSlider.scss";
 export default function CategoriaSlider() {
     const categoria = [
         { src: "/images/static/sapatos/botas.png", label: "Botas" },
-        { src: "/images/static/sapatos/sandalias.png", label: "Sandálias" },
-        { src: "/images/static/sapatos/sapatilhas.png", label: "Sapatilhas" },
         { src: "/images/static/sapatos/scarpins.png", label: "Scarpins" },
+        { src: "/images/static/sapatos/sapatilhas.png", label: "Sapatilhas" },
+        { src: "/images/static/sapatos/sandalias.png", label: "Sandálias" },
     ];
 
     const settings = {

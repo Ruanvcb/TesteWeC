@@ -62,19 +62,23 @@
             color: #b11b26;
             font-weight: lighter;
             background-color: #fff;
-            border: 1px dashed #919191;
+            //Se aumentar mais o px, o pontilhado fica mais espaçado
+            //Demorei pra entender isso;
+            border: 3px #919191;
+            border-style: dashed;
+
             border-right: none;
             border-radius: 40px 0 0 40px;
         }
     
         button {
-            padding: 15px;
+            padding: 17px;
             width: 30%;
             font-size: 1rem;
             background-color: #b11b26;
             color: #fff;
             border: none;
-            border-radius: 0 40px 40px 0; //isso faz as bordas ficarem arredondadas, demorei um pouquinho.
+            border-radius: 0 45px 45px 0; //isso faz as bordas ficarem arredondadas, demorei um pouquinho.
             font-weight: 500;
             cursor: pointer;
             transition: background-color 0.3s ease;

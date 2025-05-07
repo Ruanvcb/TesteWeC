@@ -9,6 +9,7 @@ import Header from "./Header";
 import CepModal from "./CepModal";
 import Footer from "./Footer";
 import ProdutoModal from "./ProdutoModal";
+import SideBarCarrinho from "./SideBarCarrinho";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -17,6 +18,11 @@ export default function App() {
   const [cidade, setCidade] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isProdutoModalOpen, setIsProdutoModalOpen] = useState(false);
+
+  const [isCarrinhoOpen, setCarrinhoOpen] = useState(false);
+
+  const openCarrinho = () => setCarrinhoOpen(true);
+  const closeCarrinho = () => setCarrinhoOpen(false);
 
   const handleSaveCep = (data) => {
     setCidade(data.cidade);
@@ -38,7 +44,7 @@ export default function App() {
   return (
   <>
     <CepBanner cidade={cidade} onEdit={() => setShowModal(true)} />
-    <Header />
+    <Header onCartClick={openCarrinho} />
     <div className="main-content">
       <BannerSlider />
       <CategoriaSlider />
@@ -59,6 +65,8 @@ export default function App() {
         onClose={handleCloseProdutoModal}
       />
     )}
+
+    <SideBarCarrinho isOpen={isCarrinhoOpen} onClose={closeCarrinho} />
 
   </>
   );

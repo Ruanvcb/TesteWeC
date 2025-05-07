@@ -1,0 +1,189 @@
+// src/SideBarCarrinho.scss
+
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 200;
+  
+    &.open {
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    .sidebar-carrinho {
+      background: #fff;
+      width: 80%;
+      max-width: 360px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      animation: slideIn 0.3s forwards;
+      overflow-y: auto;
+  
+      .header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+  
+        h2 {
+          margin: 0;
+          font-size: 20px;
+        }
+
+        .close-button {
+          position: absolute;
+          top: 15px;
+          right: 25px;
+          font-size: 24px;
+          background: #EEEEEE;
+          border: none;
+          font-family: 'Times New Roman', Times, serif;
+          cursor: pointer;
+          color: #808584;
+
+          &:hover {
+            background: #a0a4a2;
+          }
+        }
+      }
+  
+      .items {
+        flex: 1;
+        .item-card {
+          display: flex;
+          border-radius: 1px;
+          padding: 15px;
+          border-bottom: 1px solid #f0f0f0;
+  
+          img { 
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-right: 15px;
+            padding: 10px;
+            background-color: #EEEEEE;
+          }
+  
+          .info {
+            flex: 1;
+  
+            .name {
+              font-size: 14px;
+              margin-bottom: 6px;
+              font-weight: 500;
+            }
+  
+            .size,
+            .price {
+              font-size: 13px;
+              color: #666;
+              margin-bottom: 6px;
+            }
+  
+            .qty-control {
+                float: left;
+                display: inline-flex;
+                margin-top: 10px;
+                margin-left: -80%;
+                clear: both;
+  
+                button {
+                width: 30px;
+                height: 30px;
+                border: 1px solid #ccc;
+                background: none;
+                cursor: pointer;
+                font-size: 15px;
+                clear: both;
+
+                    &:disabled {
+                        cursor: not-allowed;
+                        opacity: 0.5;
+                    }
+
+                    span {
+                        border: 1px 0 solid #ccc;
+                        font-size: 15px;
+                    }
+                }
+            }
+  
+            .remove {
+                /* alinha à direita */
+                float: right;
+                background: none;
+                border: none;
+                color: #888;
+                font-size: 12px;
+                cursor: pointer;
+                margin-top: -25px;
+                clear: both;
+                /* ajusta alinhamento vertical */
+            }
+          }
+        }
+      }
+  
+      .summary {
+        padding: 16px;
+  
+        .line {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 8px;
+  
+          &.total span {
+            font-weight: bold;
+          }
+        }
+  
+        .checkout {
+          width: 100%;
+          padding: 12px;
+          background: #b71c1c;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          margin-bottom: 8px;
+  
+          &:hover {
+            background: #a71b1b;
+          }
+        }
+  
+        .continue {
+          background: none;
+          border: none;
+          color: #555;
+          text-decoration: underline;
+          cursor: pointer;
+          display: block;
+          margin: 0 auto;
+          transition: color 0.3s;
+  
+          &:hover {
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .no-scroll {
+    overflow: hidden !important;
+  }

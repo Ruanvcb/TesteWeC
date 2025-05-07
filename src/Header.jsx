@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import SideBar from "./SideBar";
 import "./Header.scss";
 
-export default function Header() {
+
+export default function Header({ onCartClick }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -34,13 +35,13 @@ export default function Header() {
           className="logo"
         />
 
-        <div className="header-left">
+        <div className="header-right">
           <button className="icon-button">
             <i className="fa-regular fa-user"></i>
           </button>
 
-          <button className="icon-button">
-            <i className="fa-solid fa-bag-shopping"></i>
+          <button className="icon-button" onClick={onCartClick}>
+            <i className="fa fa-bag-shopping"></i>
           </button>
         </div>
       </header>
