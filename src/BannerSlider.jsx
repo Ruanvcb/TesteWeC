@@ -4,7 +4,10 @@ import Slider from "react-slick";
 import "./BannerSlider.scss";
 
 export default function BannerSlider() {
+
   const images = [
+    //ordem ta assim pq a segunda imagem nao tem botão
+    //no return fica certo
     "/images/static/banner/banner-principal-1.png",
     "/images/static/banner/banner-principal-3.png",
     "/images/static/banner/banner-principal-2.png",

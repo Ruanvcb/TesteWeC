@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import './CepModal.scss';
 
 export default function CepModal({ onClose, onSave }) {
-  const [cep, setCep] = useState("");
-  const [cidade, setCidade] = useState("");
-  const [estado, setEstado] = useState("");
+  const [cep, setCep] = useState(() => localStorage.getItem("cep") || "");
+  const [cidade, setCidade] = useState(() => localStorage.getItem("cidade") || "");
+  const [estado, setEstado] = useState(() => localStorage.getItem("estado") || "");
+  
 
   const handleSave = () => {
+    localStorage.setItem("cep", cep);
+    localStorage.setItem("estado", estado);
+
     onSave({ cidade });
     onClose();
   };

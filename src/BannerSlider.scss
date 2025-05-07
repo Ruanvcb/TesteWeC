@@ -4,7 +4,7 @@
   .slide {
     position: relative;
     width: 100%;
-    height: 83vh; // ajuste para afastamemnto da imagem
+    height: 83vh; // ajuste para afastar a imagem
     overflow: hidden;
 
     img {
@@ -35,7 +35,7 @@
   .slick-dots {
     bottom: 50px;
     li {
-      margin: 0 -3px; //assim as bolinhas(slick-dot) ficam mais próximas/ Achei no stack tbm 
+      margin: 0 -3px; //assim as bolinhas(slick-dot) ficam mais próximas/ achei no stack tbm 
 
       button:before{
         margin-left: 150px;

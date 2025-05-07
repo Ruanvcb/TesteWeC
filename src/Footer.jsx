@@ -2,6 +2,8 @@
 import React from "react";
 import "./Footer.scss";
 
+//O footer eu tinha ele quase completo de um outro projeto
+//Só copiei e colei e mudei umas coisas
 export default function Footer() {
   return (
     <footer className="footer">
@@ -10,10 +12,10 @@ export default function Footer() {
       </div>
 
       <div className="footer-social">
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/ruanvcb/" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-instagram"></i>
         </a>
-        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/RuanVCB" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-facebook-f"></i>
         </a>
         <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer">
