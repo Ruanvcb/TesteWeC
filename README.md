@@ -10,7 +10,9 @@ Este é um projeto desenvolido para plataforma Mobile usando REACT JS e SCSS com
  🖼️ Slider interativos
 
   Side bar's laterais
+  
   Side bar da esquerda mostra opções de estilos de sapatos;
+  
   Side bar da direita mostra um carrinho com um item adicionado;
 
 ## 🧑‍💻 Tecnologias utilizadas
