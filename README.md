@@ -2,6 +2,9 @@
 
 Este é um projeto desenvolido para plataforma Mobile usando REACT JS e SCSS como um desafio técnico para uma empresa; O programa permite que o usuário tenha uma experiência parcial de um App Mobile de uma Loja de Sapatos fictícia;
 
+ATENÇÃO
+Vídeo de demonstação do teste: https://youtu.be/JsImeqvjRJA
+
 🚀 Funcionalidades:
 
 📍Ao entrar na tela pela primeira vez um modal de localização é aberto
