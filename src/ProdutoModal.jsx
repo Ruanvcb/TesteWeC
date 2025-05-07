@@ -1,8 +1,7 @@
-// src/ProdutoModal.jsx
 import React, { useState, useEffect } from "react";
 import "./ProdutoModal.scss";
 
-export default function ProdutoModal({ product, onClose }) {
+export default function ProdutoModal({ product, onClose, onAddToCart }) {
   const [selectedSize, setSelectedSize] = useState(null);
   const tamanhos = [34, 35, 36, 37, 38, 39, 40, 42];
 
@@ -13,20 +12,27 @@ export default function ProdutoModal({ product, onClose }) {
     };
   }, []);
 
+  const handleAdd = () => {
+    const productWithSize = {
+      ...product,
+      selectedSize,
+    };
+
+    onAddToCart(productWithSize);
+  };
+
   return (
     <div className="produto-modal-overlay">
       <div className="produto-modal">
-      <button className="close-button" onClick={onClose}>×</button>
+        <button className="close-button" onClick={onClose}>×</button>
         <img src={product.image} alt={product.name} className="produto-img" />
         <h3>{product.name}</h3>
 
         <div className="tamanhos">
-
-        {/* cor do número ao lado do Tamanho */}
-        <p className="alinhar">
+          <p className="alinhar">
             Tamanho:{" "}
             <span style={{ color: "#8A8A8A" }}>{selectedSize || " "}</span>
-        </p>
+          </p>
 
           <div className="grade">
             {tamanhos.map((tamanho) => (
@@ -42,7 +48,7 @@ export default function ProdutoModal({ product, onClose }) {
           </div>
         </div>
 
-        <button className="adicionar-btn">
+        <button className="adicionar-btn" onClick={handleAdd}>
           Adicionar ao carrinho <i className="fa-solid fa-bag-shopping"></i>
         </button>
       </div>

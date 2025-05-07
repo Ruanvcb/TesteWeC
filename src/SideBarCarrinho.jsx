@@ -19,7 +19,7 @@ export default function SideBarCarrinho({ isOpen, onClose }) {
     return () => document.body.classList.remove("no-scroll");
   }, [isOpen]);
 
-  // Cálculos para o subtotal/descontos e total
+  // Cálculos para o subtotal/descontos e total;
   const subtotal = 1055.89;
   const discounts = 191.62;
   const total = subtotal - discounts;
@@ -39,12 +39,15 @@ export default function SideBarCarrinho({ isOpen, onClose }) {
               <p className="name">{item.name}</p>
               <p className="size">Tamanho: {item.size}</p>
               <p className="price">R$ {item.price.amount.toFixed(2)}</p>
-              <div className="qty-control">
-                <button disabled>-</button>
-                <span>{item.quantity}</span>
-                <button disabled>+</button>
+              {/* Na mesma div pra mexer melhro na box */}
+              <div className="bottom-controls">
+                <div className="qty-control">
+                  <button disabled>-</button>
+                  <span>{item.quantity}</span>
+                  <button disabled>+</button>
+                </div>
+                <button className="remove" disabled>Remover</button>
               </div>
-              <button className="remove" disabled>Remover</button>
             </div>
           </div>
         </div>

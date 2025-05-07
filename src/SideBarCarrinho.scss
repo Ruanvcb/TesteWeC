@@ -57,7 +57,6 @@
         flex: 1;
         .item-card {
           display: flex;
-          border-radius: 1px;
           padding: 15px;
           border-bottom: 1px solid #f0f0f0;
   
@@ -69,10 +68,10 @@
             padding: 10px;
             background-color: #EEEEEE;
           }
-  
           .info {
             flex: 1;
   
+            
             .name {
               font-size: 14px;
               margin-bottom: 6px;
@@ -87,35 +86,40 @@
             }
   
             .qty-control {
-                float: left;
-                display: inline-flex;
-                margin-top: 10px;
-                margin-left: -80%;
-                clear: both;
-  
-                button {
+              display: flex;
+              align-items: center;
+              border: 1px solid #ccc;
+              border-radius: 1px;
+              overflow: hidden;
+              width: fit-content;
+              margin-top: 10px;
+              margin-left: -135px;
+            
+              button {
                 width: 30px;
                 height: 30px;
-                border: 1px solid #ccc;
-                background: none;
+                border: none; // remove as bordas do btao
+                background: #f5f5f5;
+                font-size: 16px;
                 cursor: pointer;
-                font-size: 15px;
-                clear: both;
-
-                    &:disabled {
-                        cursor: not-allowed;
-                        opacity: 0.5;
-                    }
-
-                    span {
-                        border: 1px 0 solid #ccc;
-                        font-size: 15px;
-                    }
+            
+                &:disabled {
+                  cursor: not-allowed;
+                  opacity: 0.5;
                 }
+              }
+            
+              span {
+                width: 30px;
+                text-align: center;
+                font-size: 15px;
+                line-height: 30px;
+                background: white;
+                border: none; //mesma coisa que de cima
+              }
             }
-  
+            
             .remove {
-                /* alinha à direita */
                 float: right;
                 background: none;
                 border: none;
@@ -123,15 +127,17 @@
                 font-size: 12px;
                 cursor: pointer;
                 margin-top: -25px;
+                //faz pular a linha
                 clear: both;
-                /* ajusta alinhamento vertical */
             }
+            
           }
         }
       }
   
       .summary {
         padding: 16px;
+        height: 25%;
   
         .line {
           display: flex;

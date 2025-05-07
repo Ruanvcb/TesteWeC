@@ -3,7 +3,7 @@ import SideBar from "./SideBar";
 import "./Header.scss";
 
 
-export default function Header({ onCartClick }) {
+export default function Header({ onCartClick, cartCount }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -42,6 +42,7 @@ export default function Header({ onCartClick }) {
 
           <button className="icon-button" onClick={onCartClick}>
             <i className="fa fa-bag-shopping"></i>
+            {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
           </button>
         </div>
       </header>
