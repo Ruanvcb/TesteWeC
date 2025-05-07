@@ -21,7 +21,7 @@ Este é um projeto desenvolido para plataforma Mobile usando REACT JS e SCSS com
 - **Font Awesome** para ícones
 - **LocalStorage** para persistência de dados simples
 
-- 
+
 ## 🖥️ Como rodar o projeto
 
 1. **Clone o repositório**
