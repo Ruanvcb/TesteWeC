@@ -42,11 +42,14 @@ Navegue até a pasta do projeto:
 cd ..
 
 Instale as dependências do projeto utilizando npm install.
+
 Execute o projeto localmente com npm start.
 
 👨‍💻 Autor
 
 Ruan Vagner Cardozo Barbosa
 
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+Este projeto está sob a licença MIT. 
+
+Veja o arquivo LICENSE para mais detalhes.
 
